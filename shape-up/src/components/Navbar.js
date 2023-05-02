@@ -18,9 +18,9 @@ const Navbar = () => {
         alignItems="flex-end"
       >
         <Link to="/" style={{textDecoration: 'none', color: "#3A1212", borderBottom: '3px solid #FF2625'}}>Home</Link>
-        <a href="#exercises" style={{textDecoration: 'none', color: '#3A1212'}}>Features</a>
+        <a href="/features" style={{textDecoration: 'none', color: '#3A1212'}}>Features</a>
         <a href="/workouts" style={{textDecoration: 'none', color: '#3A1212'}}>Workout Planner</a>
-        <a href="/calories" style={{textDecoration: 'none', color: '#3A1212'}}>Calorie Calculator</a>
+        <a href="/pages/calorielog" style={{textDecoration: 'none', color: '#3A1212'}}>Calorie Log</a>
       </Stack>
     </Stack>
   )
