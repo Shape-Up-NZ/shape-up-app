@@ -35,7 +35,7 @@ const WorkoutPlan = () => {
   useEffect(() => {
     if (exercises.length > 0) {
       const randomExercises = [];
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 7; i++) {
         const randomIndex = Math.floor(Math.random() * exercises.length);
         randomExercises.push(exercises[randomIndex]);
       }
