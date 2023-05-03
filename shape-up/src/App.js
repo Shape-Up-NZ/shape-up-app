@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 import './App.css';
-import ExerciseDetail from './pages/ExerciseInformation';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import Workouts from './pages/Workouts';
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/exercise/:id" element={<ExerciseDetail />} />
+            <Route path="/pages/Workouts" element={<Workouts />} />
         </Routes>
     </Box>
   )
