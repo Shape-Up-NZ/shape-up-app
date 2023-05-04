@@ -8,9 +8,9 @@ const CalorieCalculator = () => {
   const calculateCalories = (e) => {
     e.preventDefault();
     const bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-    const deficitCalories = bmr * 0.8;
+    const deficitCalories = bmr - 500;
     const maintenanceCalories = bmr;
-    const bulkingCalories = bmr * 1.2;
+    const bulkingCalories = bmr + 500;
 
     setResults({
       deficit: deficitCalories.toFixed(2),
