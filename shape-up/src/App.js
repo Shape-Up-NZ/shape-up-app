@@ -6,6 +6,8 @@ import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Workouts from './pages/Workouts';
+import Bmrcalculator from './pages/bmrcalculator';
+
 
 const App = () => {
   return (
@@ -14,6 +16,7 @@ const App = () => {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pages/Workouts" element={<Workouts />} />
+            <Route path="/pages/bmrcalculator" element={<Bmrcalculator />} />
         </Routes>
     </Box>
   )

@@ -54,21 +54,21 @@ const WorkoutPlan = () => {
 
   return (
     <div>
-      <h2>Random Workout Plan</h2>
-      <table>
+      <h2>Workout Generator</h2>
+      <table style={{ borderCollapse: "collapse", width: "100%" }}>
         <thead>
           <tr>
-            <th>Exercise</th>
-            <th>Sets</th>
-            <th>Reps</th>
+            <th style={{ border: "1px solid black", padding: "5px" }}>Exercise</th>
+            <th style={{ border: "1px solid black", padding: "5px" }}>Sets</th>
+            <th style={{ border: "1px solid black", padding: "5px" }}>Reps</th>
           </tr>
         </thead>
         <tbody>
           {workoutPlan.map((exercise, index) => (
             <tr key={index}>
-              <td>{exercise.exercise}</td>
-              <td>{exercise.sets}</td>
-              <td>{exercise.reps}</td>
+              <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.exercise}</td>
+              <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.sets}</td>
+              <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.reps}</td>
             </tr>
           ))}
         </tbody>
