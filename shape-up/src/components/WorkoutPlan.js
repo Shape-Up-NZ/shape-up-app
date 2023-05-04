@@ -57,7 +57,7 @@ const WorkoutPlan = () => {
       <div>
         <label htmlFor="muscles">Select muscles:</label>
         <select id="muscles" value={muscles} onChange={(e) => setMuscles(e.target.value)}>
-          <option value="">--Choose a muscle group--</option>
+          <option value="">Select a muscle group</option>
           <option value="chest">Chest</option>
           <option value="back">Back</option>
           <option value="shoulders">Shoulders</option>
