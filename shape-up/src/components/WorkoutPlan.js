@@ -4,8 +4,8 @@ import axios from "axios";
 const WorkoutPlan = () => {
   const [exercises, setExercises] = useState([]);
   const [workoutPlan, setWorkoutPlan] = useState([{ exercise: "", sets: 0, reps: 0 }]);
+  const [muscles, setMuscles] = useState("");
 
-  // Fetch a list of exercises from the API on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,9 +17,9 @@ const WorkoutPlan = () => {
               "x-rapidapi-key": "6e34b00e3cmsh906569fec1b49b7p1f3755jsnb0fdea2f124c",
             },
             params: {
-              muscles: "chest,triceps",
-              equipment: "barbell",
-              difficulty: "3",
+              muscles,
+              equipment: "dumbbell",
+              difficulty: "1",
             },
           }
         );
@@ -29,9 +29,8 @@ const WorkoutPlan = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [muscles]);
 
-  // Generate a random workout plan when the list of exercises changes
   useEffect(() => {
     if (exercises.length > 0) {
       const randomExercises = [];
@@ -54,7 +53,20 @@ const WorkoutPlan = () => {
 
   return (
     <div>
-      <h2>Workout Generator</h2>
+      <h2>Bro-Split Workout Generator</h2>
+      <div>
+        <label htmlFor="muscles">Select muscles:</label>
+        <select id="muscles" value={muscles} onChange={(e) => setMuscles(e.target.value)}>
+          <option value="">--Choose a muscle group--</option>
+          <option value="chest">Chest</option>
+          <option value="back">Back</option>
+          <option value="shoulders">Shoulders</option>
+          <option value="biceps">Biceps</option>
+          <option value="triceps">Triceps</option>
+          <option value="legs">Legs</option>
+          <option value="abs">Abs</option>
+        </select>
+      </div>
       <table style={{ borderCollapse: "collapse", width: "100%" }}>
         <thead>
           <tr>
@@ -70,11 +82,11 @@ const WorkoutPlan = () => {
               <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.sets}</td>
               <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.reps}</td>
             </tr>
-          ))}
+            ))}
         </tbody>
       </table>
     </div>
-  );
-};
+    );
+    };
 
 export default WorkoutPlan;
