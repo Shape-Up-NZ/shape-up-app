@@ -6,9 +6,12 @@ import WorkoutPlan from '../components/WorkoutPlan';
 
 const Workouts = () => {
   return (
+
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <WorkoutPlan />
     </Box>
+  
+    
   )
 }
 
