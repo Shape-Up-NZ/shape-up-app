@@ -7,7 +7,8 @@ const CalorieCalculator = () => {
 
   const calculateCalories = (e) => {
     e.preventDefault();
-    const bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+    let bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+    bmr = Math.trunc(bmr);
     const deficitCalories = bmr - 500;
     const maintenanceCalories = bmr;
     const bulkingCalories = bmr + 500;
