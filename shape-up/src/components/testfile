@@ -1,1 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World Test</title>
+  <script>
+    alert('Hello, World!');
+  </script>
+  </head>
+  <body>
+  </body>
+  </html>
