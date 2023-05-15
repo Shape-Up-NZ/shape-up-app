@@ -1,13 +1,2 @@
 //Hi I am just testing this file on how to use github - ghokkul
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World Test</title>
-  <script>
-    alert('Hello, World!');
-  </script>
-  </head>
-  <body>
-  </body>
-  </html>
+
