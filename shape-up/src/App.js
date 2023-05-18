@@ -8,10 +8,14 @@ import Navbar from './components/Navbar';
 import Workouts from './pages/Workouts';
 import Bmrcalculator from './pages/bmrcalculator';
 import CalorieLog from './pages/CalorieLog';
+import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/clerk-react";
 
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 const App = () => {
   return (
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <SignedIn>
     <Box width='400px' sx={{ width: {x1: '1488px' }}} m="auto">
         <Navbar />
         <Routes>
@@ -21,6 +25,13 @@ const App = () => {
             <Route path="/pages/CalorieLog" element={<CalorieLog />} />
         </Routes>
     </Box>
+    </SignedIn>
+
+    <SignedOut>
+      <SignIn />
+    </SignedOut>
+
+    </ClerkProvider>
   )
 }
 
