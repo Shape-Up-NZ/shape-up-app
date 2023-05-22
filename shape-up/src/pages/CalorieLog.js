@@ -9,10 +9,8 @@ function CalorieLog()
   return(
   
   <>
-  
       <CalorieResult />
-      <CalorieTypeForm />
-      
+      <CalorieTypeForm />  
   </>
     
   )
@@ -20,3 +18,4 @@ function CalorieLog()
 }
 
 export default CalorieLog;
+
