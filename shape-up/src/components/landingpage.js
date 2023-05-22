@@ -3,18 +3,21 @@ import './landingpage.css';
 import BgVideo from '../assets/videos/gymvid1.mp4';
 import Logo from '../assets/images/Logo.png';
 import { SignIn } from '@clerk/clerk-react';
+import { useNavigate } from 'react-router-dom';
 
 
 const LandingPage = ({ onButtonClick }) => {
 
-    const [buttonClicked, setButtonClicked] = useState(false);
+    const navigate = useNavigate();
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   const handleButtonClick = () => {
     setButtonClicked(true);
+    navigate('/pages/LoginPage');
   };
 
   if (buttonClicked) {
-    return <SignIn />; 
+    return null; // Render nothing if the button is clicked
   }
 
     return (

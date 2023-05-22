@@ -1,15 +1,15 @@
 import React from 'react'
 import { Route, Routes,  Navigate} from 'react-router-dom';
 import { Box } from '@mui/material';
-
 import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Workouts from './pages/Workouts';
 import Bmrcalculator from './pages/bmrcalculator';
 import CalorieLog from './pages/CalorieLog';
-import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/clerk-react";
+import { ClerkProvider, SignedIn, SignedOut, SignIn, UserButton } from "@clerk/clerk-react";
 import LandingPage from './components/landingpage';
+import LoginPage from './pages/LoginPage';
 
 const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
@@ -27,11 +27,15 @@ const App = () => {
             <Route path='*' element={<Navigate to='/' />} />
         </Routes>
     </Box>
+    <UserButton />
     </SignedIn>
 
     <SignedOut>
 
-      <LandingPage/>
+    <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/pages/LoginPage' element={<LoginPage/>} />
+        </Routes>
 
     </SignedOut>
 
