@@ -1,0 +1,33 @@
+{
+  "name": "shape-up-app",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> 🌐 Shape Up App </h1> <p align=\"center\"> MongoDB, Expressjs, React/Redux, Nodejs </p>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shape-Up-NZ/shape-up-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shape-Up-NZ/shape-up-app/issues"
+  },
+  "homepage": "https://github.com/Shape-Up-NZ/shape-up-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
