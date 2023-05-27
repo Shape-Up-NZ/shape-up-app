@@ -30,6 +30,7 @@ const Navbar = () => {
         <Link to="/pages/workouts" onClick={() => handleLinkClick('/pages/workouts')} style={{textDecoration: 'none', color: activeLink === '/pages/workouts' ? "#FF2625" : "#3A1212", borderBottom: activeLink === '/pages/workouts' ? '3px solid #FF2625' : 'none'}}>Workout Planner</Link>
         <Link to="/pages/CalorieLog" onClick={() => handleLinkClick('/pages/CalorieLog')} style={{textDecoration: 'none', color: activeLink === '/pages/CalorieLog' ? "#FF2625" : "#3A1212", borderBottom: activeLink === '/pages/CalorieLog' ? '3px solid #FF2625' : 'none'}}>Calorie Log</Link>
         <Link to="/pages/bmrcalculator" onClick={() => handleLinkClick('/pages/bmrcalculator')} style={{textDecoration: 'none', color: activeLink === '/pages/bmrcalculator' ? "#FF2625" : "#3A1212", borderBottom: activeLink === '/pages/bmrcalculator' ? '3px solid #FF2625' : 'none'}}>BMR</Link>
+        <Link to="/pages/Register" onClick={() => handleLinkClick('/pages/Register')} style={{textDecoration: 'none', color: activeLink === '/pages/Register' ? "#FF2625" : "#3A1212", borderBottom: activeLink === '/pages/Register' ? '3px solid #FF2625' : 'none'}}>Register</Link>
         <Link to="/pages/Login" onClick={() => handleLinkClick('/pages/Login')} style={{textDecoration: 'none', color: activeLink === '/pages/Login' ? "#FF2625" : "#3A1212", borderBottom: activeLink === '/pages/Login' ? '3px solid #FF2625' : 'none'}}>Login</Link>
 
       </Stack>
