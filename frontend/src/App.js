@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Workouts from './pages/Workouts';
 import Bmrcalculator from './pages/bmrcalculator';
 import CalorieLog from './pages/CalorieLog';
-
+import Login from './pages/Login'
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
             <Route path="/pages/Workouts" element={<Workouts />} />
             <Route path="/pages/bmrcalculator" element={<Bmrcalculator />} />
             <Route path="/pages/CalorieLog" element={<CalorieLog />} />
+            <Route path="/pages/Login" element={<Login />} />
         </Routes>
     </Box>
   )
