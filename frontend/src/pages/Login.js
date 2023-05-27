@@ -1,50 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import { Container, Form, Button } from "react-bootstrap";
+import { BsEnvelope, BsLock } from "react-icons/bs";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
   const handleLogin = (e) => {
     e.preventDefault();
-    // Perform login logic here, such as making an API request to authenticate the user
-    // You can use the 'email' and 'password' state variables for this purpose
-    // After successful login, you can redirect the user to another page or update the UI accordingly
+    // Handle login logic
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+    <div className=" py-5">
+      <Container className="d-flex justify-content-center">
+        <Form onSubmit={handleLogin}>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+          </Form.Group>
+
+          <Form.Group controlId="formPassword" className=" py-2">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+
+          <Button variant="primary" type="submit">
+            <BsEnvelope /> <BsLock /> Login
+          </Button>
+        </Form>
+      </Container>
     </div>
   );
 };
