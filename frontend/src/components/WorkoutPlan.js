@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Form, Table } from "react-bootstrap";
 
 const WorkoutPlan = () => {
   const [exercises, setExercises] = useState([]);
-  const [workoutPlan, setWorkoutPlan] = useState([{ exercise: "", sets: 0, reps: 0 }]);
+  const [workoutPlan, setWorkoutPlan] = useState([
+    { exercise: "", sets: 0, reps: 0 },
+  ]);
   const [muscles, setMuscles] = useState("");
 
   useEffect(() => {
@@ -14,7 +17,8 @@ const WorkoutPlan = () => {
           {
             headers: {
               "x-rapidapi-host": "exercisedb.p.rapidapi.com",
-              "x-rapidapi-key": "6e34b00e3cmsh906569fec1b49b7p1f3755jsnb0fdea2f124c",
+              "x-rapidapi-key":
+                "6e34b00e3cmsh906569fec1b49b7p1f3755jsnb0fdea2f124c",
             },
             params: {
               muscles,
@@ -55,38 +59,44 @@ const WorkoutPlan = () => {
     <div>
       <h2>Bro-Split Workout Generator</h2>
       <div>
-        <label htmlFor="muscles">Select muscles:</label>
-        <select id="muscles" value={muscles} onChange={(e) => setMuscles(e.target.value)}>
-          <option value="">Select a muscle group</option>
-          <option value="chest">Chest</option>
-          <option value="back">Back</option>
-          <option value="shoulders">Shoulders</option>
-          <option value="biceps">Biceps</option>
-          <option value="triceps">Triceps</option>
-          <option value="legs">Legs</option>
-          <option value="abs">Abs</option>
-        </select>
+        <Form.Group controlId="muscles">
+          <Form.Label>Select muscles:</Form.Label>
+          <Form.Control
+            as="select"
+            value={muscles}
+            onChange={(e) => setMuscles(e.target.value)}
+          >
+            <option value="">Select a muscle group</option>
+            <option value="chest">Chest</option>
+            <option value="back">Back</option>
+            <option value="shoulders">Shoulders</option>
+            <option value="biceps">Biceps</option>
+            <option value="triceps">Triceps</option>
+            <option value="legs">Legs</option>
+            <option value="abs">Abs</option>
+          </Form.Control>
+        </Form.Group>
       </div>
-      <table style={{ borderCollapse: "collapse", width: "100%" }}>
+      <Table striped bordered hover>
         <thead>
           <tr>
-            <th style={{ border: "1px solid black", padding: "5px" }}>Exercise</th>
-            <th style={{ border: "1px solid black", padding: "5px" }}>Sets</th>
-            <th style={{ border: "1px solid black", padding: "5px" }}>Reps</th>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
           </tr>
         </thead>
         <tbody>
           {workoutPlan.map((exercise, index) => (
             <tr key={index}>
-              <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.exercise}</td>
-              <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.sets}</td>
-              <td style={{ border: "1px solid black", padding: "5px" }}>{exercise.reps}</td>
+              <td>{exercise.exercise}</td>
+              <td>{exercise.sets}</td>
+              <td>{exercise.reps}</td>
             </tr>
-            ))}
+          ))}
         </tbody>
-      </table>
+      </Table>
     </div>
-    );
-    };
+  );
+};
 
 export default WorkoutPlan;

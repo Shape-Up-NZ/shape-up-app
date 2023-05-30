@@ -1,28 +1,44 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 
-export function CalorieTypeForm()
-{
-    const[Breakfast, setBreakfast] = useState(true);
-    const[Lunch, setLunch] = useState(true);
-    const[Dinner, setDinner] = useState(true);
-    const[Snack, setSnack] = useState(true);
+export function CalorieTypeForm() {
+  const [Breakfast, setBreakfast] = useState(true);
+  const [Lunch, setLunch] = useState(true);
+  const [Dinner, setDinner] = useState(true);
+  const [Snack, setSnack] = useState(true);
 
-    const handleChange=(data)=>{
+  const handleChange = (data) => {};
 
-    }
-    return(
-      
-      <div className = "CalorieTypeForm">
-
-      <input type ="checkbox" value={Breakfast} onChange={()=>handleChange("Breakfast")}/> Breakfast
-      <br></br>
-      <input type ="checkbox" value={Lunch} onChange={()=>handleChange("Lunch")}/> Lunch
-      <br></br>
-      <input type ="checkbox" value={Dinner} onChange={()=>handleChange("Dinner")}/> Dinner
-      <br></br>
-      <input type ="checkbox" value={Snack} onChange={()=>handleChange("Snack")}/> Snack
-      <br></br>
-    
-      </div>
-    )
+  return (
+    <Form className="CalorieTypeForm">
+      <Form.Check
+        type="checkbox"
+        id="breakfastCheckbox"
+        label="Breakfast"
+        onChange={() => handleChange("Breakfast")}
+      />
+      <br />
+      <Form.Check
+        type="checkbox"
+        id="lunchCheckbox"
+        label="Lunch"
+        onChange={() => handleChange("Lunch")}
+      />
+      <br />
+      <Form.Check
+        type="checkbox"
+        id="dinnerCheckbox"
+        label="Dinner"
+        onChange={() => handleChange("Dinner")}
+      />
+      <br />
+      <Form.Check
+        type="checkbox"
+        id="snackCheckbox"
+        label="Snack"
+        onChange={() => handleChange("Snack")}
+      />
+      <br />
+    </Form>
+  );
 }

@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import {
+  Form,
+  FormGroup,
+  FormLabel,
+  FormControl,
+  Button,
+  Table,
+} from "react-bootstrap";
+import FormContainer from "../components/FormContainer";
 
 const CalorieCalculator = () => {
-  const [age, setAge] = useState('');
-  const [weight, setWeight] = useState('');
-  const [height, setHeight] = useState('');
+  const [age, setAge] = useState("");
+  const [weight, setWeight] = useState("");
+  const [height, setHeight] = useState("");
 
   const calculateCalories = (e) => {
     e.preventDefault();
@@ -21,64 +30,68 @@ const CalorieCalculator = () => {
   };
 
   const [results, setResults] = useState({
-    deficit: '',
-    maintenance: '',
-    bulking: '',
+    deficit: "",
+    maintenance: "",
+    bulking: "",
   });
 
   return (
-    <form onSubmit={calculateCalories}>
-      <div>
-        <label htmlFor="age">Age: </label>
-        <input
+    <Form onSubmit={calculateCalories}>
+      <FormGroup>
+        <FormLabel htmlFor="age">Age: </FormLabel>
+        <FormControl
           type="number"
           id="age"
           value={age}
           onChange={(e) => setAge(e.target.value)}
         />
-      </div>
-      <div>
-        <label htmlFor="weight">Weight (kg): </label>
-        <input
+      </FormGroup>
+      <FormGroup>
+        <FormLabel htmlFor="weight">Weight (kg): </FormLabel>
+        <FormControl
           type="number"
           id="weight"
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
         />
-      </div>
-      <div>
-        <label htmlFor="height">Height (cm): </label>
-        <input
+      </FormGroup>
+      <FormGroup>
+        <FormLabel htmlFor="height">Height (cm): </FormLabel>
+        <FormControl
           type="number"
           id="height"
           value={height}
           onChange={(e) => setHeight(e.target.value)}
         />
-      </div>
-      <button type="submit">Calculate Calories</button>
-      <table style={{ border: '1px solid black', borderCollapse: 'collapse' }}>
+      </FormGroup>
+
+      <Button variant="primary" type="submit" className="mb-3 mt-3">
+        Calculate Calories
+      </Button>
+
+      <Table bordered>
         <thead>
-          <tr style={{ border: '1px solid black' }}>
-            <th style={{ border: '1px solid black', padding: '5px' }}>Calorie Type</th>
-            <th style={{ border: '1px solid black', padding: '5px' }}>Calories</th>
+          <tr>
+            <th>Calorie Type</th>
+            <th>Calories</th>
           </tr>
         </thead>
         <tbody>
-          <tr style={{ border: '1px solid black' }}>
-            <td style={{ border: '1px solid black', padding: '5px' }}>Deficit</td>
-            <td style={{ border: '1px solid black', padding: '5px' }}>{results.deficit}</td>
+          <tr>
+            <td>Deficit</td>
+            <td>{results.deficit}</td>
           </tr>
-          <tr style={{ border: '1px solid black' }}>
-            <td style={{ border: '1px solid black', padding: '5px' }}>Maintenance</td>
-            <td style={{ border: '1px solid black', padding: '5px' }}>{results.maintenance}</td>
+          <tr>
+            <td>Maintenance</td>
+            <td>{results.maintenance}</td>
           </tr>
-          <tr style={{ border: '1px solid black' }}>
-            <td style={{ border: '1px solid black', padding: '5px' }}>Bulking</td>
-            <td style={{ border: '1px solid black', padding: '5px' }}>{results.bulking}</td>
+          <tr>
+            <td>Bulking</td>
+            <td>{results.bulking}</td>
           </tr>
         </tbody>
-      </table>
-    </form>
+      </Table>
+    </Form>
   );
 };
 
