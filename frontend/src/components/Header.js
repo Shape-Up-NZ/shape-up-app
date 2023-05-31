@@ -24,7 +24,8 @@ const Header = () => {
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
-      navigate("/login");
+      navigate("/");
+      toast.success("Logout Successfully!");
     } catch (err) {
       console.error(err);
     }
