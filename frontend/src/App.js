@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Box } from "@mui/material";
 import { Container } from "react-bootstrap";
+import {ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 import Home from "./pages/Home";
@@ -16,6 +18,7 @@ import Register from "./pages/Register";
 const App = () => {
   return (
     <Container>
+      <ToastContainer />
       <Box width="400px" sx={{ width: { x1: "1488px" } }} m="auto">
         <Navbar />
         <Routes>
