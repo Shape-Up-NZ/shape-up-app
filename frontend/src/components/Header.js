@@ -20,6 +20,16 @@ const Header = () => {
 
   const [logoutApiCall] = useLogoutMutation();
 
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate("/login");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -138,7 +148,9 @@ const Header = () => {
                 <NavDropdown.Item as={Link} to="/pages/profile">
                   Profile
                 </NavDropdown.Item>
-                <NavDropdown.Item>Logout</NavDropdown.Item>
+                <NavDropdown.Item onClick={logoutHandler}>
+                  Logout
+                </NavDropdown.Item>
               </NavDropdown>
             ) : (
               <>
