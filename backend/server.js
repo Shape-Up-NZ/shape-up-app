@@ -6,7 +6,6 @@ import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
 const port = process.env.PORT || 5123;
 import userRoutes from "./routes/userRoutes.js";
-import cors from "cors";
 
 connectDB();
 
@@ -17,7 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-app.use(cors());
 
 app.use("/api/users", userRoutes);
 
