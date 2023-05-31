@@ -2,10 +2,11 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Box } from "@mui/material";
 import { Container } from "react-bootstrap";
-import {ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
+import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Features from "./pages/Features";
@@ -14,6 +15,7 @@ import Bmrcalculator from "./pages/bmrcalculator";
 import CalorieLog from "./pages/CalorieLog";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 
 const App = () => {
   return (
@@ -29,6 +31,11 @@ const App = () => {
           <Route path="/pages/calorieLog" element={<CalorieLog />} />
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/login" element={<Login />} />
+
+          {/* Private Route */}
+          <Route path="" element={<PrivateRoute />}>
+            <Route path="/pages/profile" element={<Profile />} />
+          </Route>
         </Routes>
       </Box>
     </Container>
