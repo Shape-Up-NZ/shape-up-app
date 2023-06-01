@@ -18,7 +18,7 @@ const WorkoutPlan = () => {
             headers: {
               "x-rapidapi-host": "exercisedb.p.rapidapi.com",
               "x-rapidapi-key":
-                "6e34b00e3cmsh906569fec1b49b7p1f3755jsnb0fdea2f124c",
+                "3190d2cd3amshe401585bbe87576p18b44djsn7669ffd89aa8",
             },
             params: {
               muscles,

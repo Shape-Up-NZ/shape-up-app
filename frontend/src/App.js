@@ -16,6 +16,7 @@ import CalorieLog from "./pages/CalorieLog";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
+import Nutrition from "./pages/Nutrition";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/pages/workouts" element={<Workouts />} />
           <Route path="/pages/bmrcalculator" element={<Bmrcalculator />} />
           <Route path="/pages/calorieLog" element={<CalorieLog />} />
+          <Route path="/pages/Nutrition" element={<Nutrition />} />
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/login" element={<Login />} />
 
