@@ -1,20 +1,15 @@
-import React from "react";
+import React, {useState} from 'react';
+import { Box } from '@mui/material';
 
-import { CalorieInputForm } from "../components/CalorieInputForm";
-import { CalorieTypeForm } from "../components/CalorieTypeForm";
-import { CalorieResult } from "../components/CalorieResult";
-import FormContainer from "../components/FormContainer";
+import MealLog from '../components/NutritionLog';
 
-function CalorieLog() {
+
+const CalorieLog = () => {
   return (
-    <>
-      <FormContainer>
-        <h1>Calorie Log</h1>
-        <CalorieResult />
-        <CalorieTypeForm />
-      </FormContainer>
-    </>
-  );
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+        <MealLog />
+    </Box>
+  )
 }
 
-export default CalorieLog;
+export default CalorieLog
