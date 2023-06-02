@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Row, Col } from "react-bootstrap";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { setCredentials } from "../slices/authSlice";
 import ProfileSidebar from "../components/ProfileSidebar";
 import UpdateProfile from "../components/UpdateProfile";
 import UpdateDietProfile from "../components/UpdateDietProfile";
+import MealPlan from "../components/MealPlan";
 
 const Profile = () => {
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state) => state.auth);
-  const location = useLocation();
 
   useEffect(() => {
     dispatch(setCredentials(userInfo));
@@ -32,6 +32,7 @@ const Profile = () => {
             element={<UpdateProfile userInfo={userInfo} dispatch={dispatch} />}
           />
           <Route path="diet" element={<UpdateDietProfile />} />
+          <Route path="meal-plan" element={<MealPlan />} />
         </Routes>
       </Col>
     </Row>

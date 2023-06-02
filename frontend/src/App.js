@@ -16,7 +16,6 @@ import NutritionChecker from "./pages/NutritionChecker";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
-import CalorieLog from "./pages/CalorieLog";
 import WaterIntake from "./pages/WaterIntake";
 
 const App = () => {
@@ -34,6 +33,8 @@ const App = () => {
             path="/pages/nutrition-checker"
             element={<NutritionChecker />}
           />
+          <Route path="/pages/water-intake" element={<WaterIntake />} />
+
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/login" element={<Login />} />
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useUpdateStatusMutation } from "../slices/usersApiSlice";
+import Loader from "./Loader";
 
 const UpdateDietProfile = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -75,7 +76,7 @@ const UpdateDietProfile = () => {
         const profileData = JSON.stringify(updatedProfile);
         localStorage.setItem("profileData", profileData);
       } catch (error) {
-        toast.error(error.message);
+        toast.error("Update failed");
         console.log("Update failed:", error);
       }
     } else {
@@ -153,6 +154,8 @@ const UpdateDietProfile = () => {
           <option value="veryActive">VERY ACTIVE</option>
         </Form.Control>
       </Form.Group>
+
+      {isLoading && <Loader />}
 
       <Button type="submit" variant="primary" className="mt-3">
         Update Diet Profile

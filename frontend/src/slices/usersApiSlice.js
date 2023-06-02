@@ -2,6 +2,7 @@ import { apiSlice } from "./apiSlice";
 
 const USERS_URL = "/api/users";
 const USER_STATUS_URL = "/api/user/status";
+const USER_MEAL_PLAN_URL = "/api/user/meal-plan";
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -43,6 +44,22 @@ export const userApiSlice = apiSlice.injectEndpoints({
         body: data,
       }),
     }),
+
+    // User meal plan endpoints
+    createMealPlan: builder.mutation({
+      query: (data) => ({
+        url: `${USER_MEAL_PLAN_URL}`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+    updateMealPlan: builder.mutation({
+      query: (data) => ({
+        url: `${USER_MEAL_PLAN_URL}`,
+        method: "PUT",
+        body: data,
+      }),
+    }),
   }),
 });
 
@@ -52,4 +69,6 @@ export const {
   useRegisterMutation,
   useUpdateUserMutation,
   useUpdateStatusMutation,
+  useUpdateMealPlanMutation,
+  useCreateMealPlanMutation,
 } = userApiSlice;

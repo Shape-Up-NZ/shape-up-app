@@ -144,14 +144,14 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/pages/WaterIntake"
-              onClick={() => handleLinkClick("/pages/WaterIntake")}
+              to="/pages/water-intake"
+              onClick={() => handleLinkClick("/pages/water-intake")}
               style={{
                 textDecoration: "none",
                 color:
-                  activeLink === "/pages/WaterIntake" ? "#FF2625" : "#3A1212",
+                  activeLink === "/pages/water-intake" ? "#FF2625" : "#3A1212",
                 borderBottom:
-                  activeLink === "/pages/WaterIntake"
+                  activeLink === "/pages/water-intake"
                     ? "3px solid #FF2625"
                     : "none",
               }}
