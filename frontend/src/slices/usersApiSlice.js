@@ -1,8 +1,11 @@
 import { apiSlice } from "./apiSlice";
+
 const USERS_URL = "/api/users";
+const USER_STATUS_URL = "/api/user/status";
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
+    // User endpoints
     login: builder.mutation({
       query: (data) => ({
         url: `${USERS_URL}/auth`,
@@ -31,6 +34,15 @@ export const userApiSlice = apiSlice.injectEndpoints({
         body: data,
       }),
     }),
+
+    // User status endpoints
+    updateStatus: builder.mutation({
+      query: (data) => ({
+        url: `${USER_STATUS_URL}`,
+        method: "PUT",
+        body: data,
+      }),
+    }),
   }),
 });
 
@@ -39,4 +51,5 @@ export const {
   useLogoutMutation,
   useRegisterMutation,
   useUpdateUserMutation,
+  useUpdateStatusMutation,
 } = userApiSlice;
