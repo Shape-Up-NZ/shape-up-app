@@ -30,7 +30,8 @@
     "express-async-handler": "^1.2.0",
     "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.2.1"
+    "mongoose": "^7.2.1",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",

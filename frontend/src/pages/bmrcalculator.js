@@ -1,8 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-
 import CalorieCalculator from "../components/CalorieCalculator";
-
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 
