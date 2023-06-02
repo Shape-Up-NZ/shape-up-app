@@ -32,8 +32,8 @@ const FeaturesPage = () => {
               {/* <CalorieLogIcon size={60} /> */}
               <Card.Title className="mt-3">Calorie Log</Card.Title>
               <Card.Text>
-                Log and monitor your daily calorie intake. Keep track of your
-                nutrition and make informed decisions about your diet.
+                Use our Nutrition Checker to check the nutritional information of your
+                food items. Keep track of your macronutrients!
               </Card.Text>
               <Link to="/pages/calorielog" className="btn btn-primary">
                 Learn More

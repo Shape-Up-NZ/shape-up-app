@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import { Box } from '@mui/material';
 
-import MealLog from '../components/NutritionLog';
+import NutritionCheckerForm from '../components/NutritionCheckerForm';
 
 
-const CalorieLog = () => {
+const NutritionChecker = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-        <MealLog />
+        <NutritionCheckerForm />
     </Box>
   )
 }
 
-export default CalorieLog
+export default NutritionChecker

@@ -112,19 +112,19 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/pages/calorielog"
-              onClick={() => handleLinkClick("/pages/calorielog")}
+              to="/pages/nutrition-checker"
+              onClick={() => handleLinkClick("/pages/nutrition-checker")}
               style={{
                 textDecoration: "none",
                 color:
-                  activeLink === "/pages/calorielog" ? "#FF2625" : "#3A1212",
+                  activeLink === "/pages/nutrition-checker" ? "#FF2625" : "#3A1212",
                 borderBottom:
-                  activeLink === "/pages/calorielog"
+                  activeLink === "/pages/nutrition-checker"
                     ? "3px solid #FF2625"
                     : "none",
               }}
             >
-              Calorie Log
+              Nutrition Checker
             </Nav.Link>
             <Nav.Link
               as={Link}

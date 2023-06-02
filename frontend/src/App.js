@@ -12,7 +12,7 @@ import Header from "./components/Header";
 import Features from "./pages/Features";
 import Workouts from "./pages/Workouts";
 import Bmrcalculator from "./pages/bmrcalculator";
-import CalorieLog from "./pages/CalorieLog";
+import NutritionChecker from "./pages/NutritionChecker";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
@@ -29,7 +29,7 @@ const App = () => {
           <Route path="/pages/features" element={<Features />} />
           <Route path="/pages/workouts" element={<Workouts />} />
           <Route path="/pages/bmrcalculator" element={<Bmrcalculator />} />
-          <Route path="/pages/calorieLog" element={<CalorieLog />} />
+          <Route path="/pages/nutrition-checker" element={<NutritionChecker />} />
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/login" element={<Login />} />
 
