@@ -142,6 +142,22 @@ const Header = () => {
             >
               BMR
             </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/pages/WaterIntake"
+              onClick={() => handleLinkClick("/pages/WaterIntake")}
+              style={{
+                textDecoration: "none",
+                color:
+                  activeLink === "/pages/WaterIntake" ? "#FF2625" : "#3A1212",
+                borderBottom:
+                  activeLink === "/pages/WaterIntake"
+                    ? "3px solid #FF2625"
+                    : "none",
+              }}
+            >
+              Water Intake
+            </Nav.Link>
           </Nav>
           <Nav>
             {userInfo ? (

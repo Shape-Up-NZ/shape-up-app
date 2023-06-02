@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
 import { Box } from '@mui/material';
 
-import WorkoutPlan from '../components/WorkoutPlan';
-import SearchExercises from '../components/WorkoutSearch';
+import WaterIntakeLog from '../components/WaterIntakeLog';
 
 
-const Workouts = () => {
+const WaterIntake = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-        <SearchExercises />
+        <WaterIntakeLog />
     </Box>
   )
 }
 
-export default Workouts
+export default WaterIntake
