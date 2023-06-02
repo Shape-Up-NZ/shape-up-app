@@ -16,7 +16,6 @@ import NutritionChecker from "./pages/NutritionChecker";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
-//import Nutrition from "./pages/Nutrition";
 
 const App = () => {
   return (
@@ -29,13 +28,17 @@ const App = () => {
           <Route path="/pages/features" element={<Features />} />
           <Route path="/pages/workouts" element={<Workouts />} />
           <Route path="/pages/bmrcalculator" element={<Bmrcalculator />} />
-          <Route path="/pages/nutrition-checker" element={<NutritionChecker />} />
+          <Route
+            path="/pages/nutrition-checker"
+            element={<NutritionChecker />}
+          />
+
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/login" element={<Login />} />
 
           {/* Private Route */}
           <Route path="" element={<PrivateRoute />}>
-            <Route path="/pages/profile" element={<Profile />} />
+            <Route path="/pages/profile/*" element={<Profile />} />
           </Route>
         </Routes>
       </Box>
