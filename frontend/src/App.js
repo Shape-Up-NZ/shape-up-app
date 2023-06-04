@@ -16,7 +16,7 @@ import NutritionChecker from "./pages/NutritionChecker";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
-import CalorieLog from "./pages/CalorieLog";
+//import CalorieLog from "./pages/CalorieLog";
 import WaterIntake from "./pages/WaterIntake";
 
 const App = () => {
