@@ -1,0 +1,44 @@
+.water-intake-log {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .water-intake-log__total {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .water-intake-log__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .water-intake-log__label {
+    margin-right: 10px;
+  }
+  
+  .water-intake-log__input {
+    width: 60px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .water-intake-log__button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .water-intake-log__button:hover {
+    background-color: #45a049;
+  }
+  
