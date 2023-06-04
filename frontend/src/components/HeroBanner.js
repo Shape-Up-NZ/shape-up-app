@@ -6,7 +6,7 @@ const HeroBanner = () => {
   return (
     <Box
       sx={{
-        mt: { lg: '100px', xs: '70px' },
+        mt: { lg: '10px', xs: '70px' },
         ml: { sm: '50px' },
         display: 'flex',
         alignItems: 'center',

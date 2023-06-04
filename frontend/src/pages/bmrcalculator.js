@@ -3,10 +3,11 @@ import { Box, Typography } from "@mui/material";
 import CalorieCalculator from "../components/CalorieCalculator";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
+import Footer from "../components/Footer";
 
 const Bmrcalculator = () => {
   return (
-    <FormContainer>
+    <><FormContainer>
       <Box
         sx={{
           display: "flex",
@@ -21,7 +22,7 @@ const Bmrcalculator = () => {
         </Typography>
         <CalorieCalculator />
       </Box>
-    </FormContainer>
+    </FormContainer><Footer /></>
   );
 };
 

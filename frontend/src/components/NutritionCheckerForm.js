@@ -32,10 +32,10 @@ const NutritionCheckerForm = () => {
   };
 
   return (
-    <Container>
+    <Container className="my-5">
       <Row className="justify-content-md-center">
         <Col md="auto">
-          <h2>Get Nutrition</h2>
+          <h2>Get Nutrition Information</h2>
           <Form
             inline
             onSubmit={(e) => {

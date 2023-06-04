@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // import CalorieLogIcon from "../components/CalorieLogIcon";
 // import BMRIcon from "../components/BMRIcon";
 // import CreateAccountIcon from "../components/CreateAccountIcon";
+import Footer from "../components/Footer";
 
 const FeaturesPage = () => {
   return (
@@ -29,11 +30,27 @@ const FeaturesPage = () => {
         <Col xs={12} md={6} lg={4}>
           <Card className="mb-4 text-center">
             <Card.Body>
+              {/* <WorkoutPlannerIcon size={60} /> */}
+              <Card.Title className="mt-3">Nutrition Checker</Card.Title>
+              <Card.Text>
+                With Nutrition Checker, you can quickly and easily see the
+                nutritional value of any food,including calories, fat, protein,
+                carbohydrates
+              </Card.Text>
+              <Link to="/pages/nutrition-checker" className="btn btn-primary">
+                Learn More
+              </Link>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={12} md={6} lg={4}>
+          <Card className="mb-4 text-center">
+            <Card.Body>
               {/* <CalorieLogIcon size={60} /> */}
               <Card.Title className="mt-3">Calorie Log</Card.Title>
               <Card.Text>
-                Use our Nutrition Checker to check the nutritional information of your
-                food items. Keep track of your macronutrients!
+                Use our Nutrition Checker to check the nutritional information
+                of your food items. Keep track of your macronutrients!
               </Card.Text>
               <Link to="/pages/calorielog" className="btn btn-primary">
                 Learn More
@@ -72,6 +89,7 @@ const FeaturesPage = () => {
           </Card>
         </Col>
       </Row>
+      <Footer />
     </Container>
   );
 };
