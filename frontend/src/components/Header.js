@@ -128,6 +128,22 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
+              to="/pages/CalorieLog"
+              onClick={() => handleLinkClick("/pages/CalorieLog")}
+              style={{
+                textDecoration: "none",
+                color:
+                  activeLink === "/pages/CalorieLog" ? "#FF2625" : "#3A1212",
+                borderBottom:
+                  activeLink === "/pages/CalorieLog"
+                    ? "3px solid #FF2625"
+                    : "none",
+              }}
+            >
+              Calorie Log
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
               to="/pages/bmrcalculator"
               onClick={() => handleLinkClick("/pages/bmrcalculator")}
               style={{
