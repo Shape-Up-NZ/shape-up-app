@@ -14,7 +14,7 @@ const NutritionCheckerForm = () => {
         )}`,
         {
           headers: {
-            "X-Api-Key": "WOO23cTA4ww2yrQ+otISmw==Z3Q2fFBcCTeE3OWj", // Replace with your actual API key
+            "X-Api-Key": "WOO23cTA4ww2yrQ+otISmw==Z3Q2fFBcCTeE3OWj", 
           },
         }
       );
@@ -35,7 +35,7 @@ const NutritionCheckerForm = () => {
     <Container>
       <Row className="justify-content-md-center">
         <Col md="auto">
-          <h2>Get Nutrition</h2>
+          <h2>Nutrition Information Search</h2>
           <Form
             inline
             onSubmit={(e) => {
