@@ -18,6 +18,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -46,6 +47,9 @@ const App = () => {
           <Route path="" element={<PrivateRoute />}>
             <Route path="/pages/profile/*" element={<Profile />} />
           </Route>
+
+          {/* 404 Page */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Box>
     </Container>

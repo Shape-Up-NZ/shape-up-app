@@ -62,9 +62,7 @@ const Header = () => {
             src={Logo}
             alt="logo"
             style={{
-              width: "94px",
-              height: "83px",
-              margin: "10px 2px 0 0",
+              width: "100px",
             }}
           />
         </Navbar.Brand>
