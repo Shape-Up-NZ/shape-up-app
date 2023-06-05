@@ -14,7 +14,7 @@ const NutritionCheckerForm = () => {
         )}`,
         {
           headers: {
-            "X-Api-Key": "WOO23cTA4ww2yrQ+otISmw==Z3Q2fFBcCTeE3OWj", // Replace with your actual API key
+            "X-Api-Key": "WOO23cTA4ww2yrQ+otISmw==Z3Q2fFBcCTeE3OWj",
           },
         }
       );
@@ -86,14 +86,14 @@ const NutritionCheckerForm = () => {
                   <td>{nutritionResult.name}</td>
                   <td>100g</td>
                   <td>{nutritionResult.calories}</td>
-                  <td>{nutritionResult.total_fat_g}</td>
-                  <td>{nutritionResult.saturated_fat_g}</td>
-                  <td>{nutritionResult.cholesterol_mg}</td>
-                  <td>{nutritionResult.sodium_mg}</td>
-                  <td>{nutritionResult.carbohydrate_g}</td>
-                  <td>{nutritionResult.fiber_g}</td>
-                  <td>{nutritionResult.sugar_g}</td>
-                  <td>{nutritionResult.protein_g}</td>
+                  <td>{nutritionResult.fat_total_g}g</td>
+                  <td>{nutritionResult.fat_saturated_g}g</td>
+                  <td>{nutritionResult.cholesterol_mg}mg</td>
+                  <td>{nutritionResult.sodium_mg}mg</td>
+                  <td>{nutritionResult.carbohydrates_total_g}g</td>
+                  <td>{nutritionResult.fiber_g}g</td>
+                  <td>{nutritionResult.sugar_g}g</td>
+                  <td>{nutritionResult.protein_g}g</td>
                 </tr>
               </tbody>
             </Table>

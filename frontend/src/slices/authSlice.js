@@ -19,6 +19,7 @@ const authSlice = createSlice({
       localStorage.removeItem("userInfo");
       localStorage.removeItem("profileData");
       localStorage.removeItem("mealPlan");
+      localStorage.removeItem("waterIntake");
     },
   },
 });

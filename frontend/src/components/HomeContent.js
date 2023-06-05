@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 const HomeContent = () => {
   return (
     <Container className="my-5">
       <Row className="mb-4">
-        <Col>
+        <Col className="text-center">
           <h1>The Tools for Your Goals</h1>
           <p>
             Trying to lose weight, tone up, lower your BMI, or invest in your
@@ -21,7 +22,7 @@ const HomeContent = () => {
               <Card.Title>Learn. Track. Improve.</Card.Title>
               <Card.Text>
                 Keeping a food diary helps you understand your habits and
-                increases your likelihood of hitting your goals.
+                to hit your goals.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -32,7 +33,7 @@ const HomeContent = () => {
             <Card.Body>
               <Card.Title>Logging Simplified.</Card.Title>
               <Card.Text>
-                Scan barcodes, save meals and recipes, and use Quick Tools for
+                Save meals and use Quick Tools for
                 fast and easy food tracking.
               </Card.Text>
             </Card.Body>
@@ -51,19 +52,34 @@ const HomeContent = () => {
           </Card>
         </Col>
       </Row>
-      
+
       <Row className="align-items-center">
         <Col md={6}>
           <h1>Start your fitness journey today!</h1>
-          <p>Sign up for Shape Up and get started on your path to a healthier lifestyle.</p>
-          <Button variant="success" className="me-2">Register</Button>
-          <Button variant="outline-primary">Login</Button>
+          <p>
+            Sign up for Shape Up and get started on your path to a healthier
+            lifestyle.
+          </p>
+          <Button
+            variant="success"
+            className="me-2"
+            as={Link}
+            to="/pages/register"
+          >
+            Register
+          </Button>
+          <Button variant="outline-primary" as={Link} to="/pages/login">
+            Login
+          </Button>
         </Col>
         <Col md={6}>
-          <img src="https://landkit.goodthemes.co/assets/img/illustrations/illustration-2.png" alt="Banner" className="img-fluid"/>
+          <img
+            src="https://landkit.goodthemes.co/assets/img/illustrations/illustration-2.png"
+            alt="Banner"
+            className="img-fluid"
+          />
         </Col>
       </Row>
-
     </Container>
   );
 };

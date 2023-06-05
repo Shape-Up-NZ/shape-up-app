@@ -7,11 +7,13 @@ import HomeContent from "../components/HomeContent";
 
 const Home = () => {
   return (
-    <Container>
-      <HeroBanner />
-      <HomeContent />
+    <>
+      <Container>
+        <HeroBanner />
+        <HomeContent />
+      </Container>
       <Footer />
-    </Container>
+    </>
   );
 };
 
