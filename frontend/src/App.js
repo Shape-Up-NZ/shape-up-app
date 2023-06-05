@@ -12,7 +12,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Features from "./pages/Features";
 import Workouts from "./pages/Workouts";
-import BMRCalculator from "./pages/BMRCalculator";
+import BMRCalculator from "./pages/bmrcalculator";
 import NutritionChecker from "./pages/NutritionChecker";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
