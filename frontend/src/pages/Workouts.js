@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
 
-import WorkoutPlan from "../components/WorkoutPlan";
-import SearchExercises from "../components/WorkoutSearch";
+import ExercisePage from "../components/ExerciseDB";
 import Footer from "../components/Footer";
 
 const Workouts = () => {
@@ -16,7 +15,7 @@ const Workouts = () => {
           height: "80vh",
         }}
       >
-        <SearchExercises />
+        <ExercisePage />
       </Box>
       <Footer />
     </>
