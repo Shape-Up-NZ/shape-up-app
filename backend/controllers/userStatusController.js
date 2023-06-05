@@ -13,6 +13,7 @@ const createUserStatus = asyncHandler(async (req, res) => {
     gender,
     dateOfBirth,
     activityLevel,
+    goal,
   } = req.body;
   const user = req.user._id;
 
@@ -25,6 +26,7 @@ const createUserStatus = asyncHandler(async (req, res) => {
     gender,
     dateOfBirth,
     activityLevel,
+    goal,
   });
 
   if (status) {
@@ -63,6 +65,7 @@ const updateUserStatus = asyncHandler(async (req, res) => {
     gender,
     dateOfBirth,
     activityLevel,
+    goal,
   } = req.body;
   const user = req.user._id;
 
@@ -79,6 +82,7 @@ const updateUserStatus = asyncHandler(async (req, res) => {
       gender,
       dateOfBirth,
       activityLevel,
+      goal,
     });
     res.status(201).json(status);
   } else {
@@ -90,6 +94,7 @@ const updateUserStatus = asyncHandler(async (req, res) => {
     status.gender = gender || status.gender;
     status.dateOfBirth = dateOfBirth || status.dateOfBirth;
     status.activityLevel = activityLevel || status.activityLevel;
+    status.goal = goal || status.goal;
 
     const updatedStatus = await status.save();
     res.status(200).json(updatedStatus);

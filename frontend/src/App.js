@@ -11,12 +11,12 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Features from "./pages/Features";
 import Workouts from "./pages/Workouts";
-import Bmrcalculator from "./pages/bmrcalculator";
+import BMRCalculator from "./pages/BMRCalculator";
 import NutritionChecker from "./pages/NutritionChecker";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
-import WaterIntake from "./pages/WaterIntake";
+import About from "./pages/About";
 
 const App = () => {
   return (
@@ -28,12 +28,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/pages/features" element={<Features />} />
           <Route path="/pages/workouts" element={<Workouts />} />
-          <Route path="/pages/bmrcalculator" element={<Bmrcalculator />} />
           <Route
             path="/pages/nutrition-checker"
             element={<NutritionChecker />}
           />
-          <Route path="/pages/water-intake" element={<WaterIntake />} />
+          <Route path="/pages/bmr-calculator" element={<BMRCalculator />} />
+          <Route path="/pages/about" element={<About />} />
 
           <Route path="/pages/register" element={<Register />} />
           <Route path="/pages/login" element={<Login />} />

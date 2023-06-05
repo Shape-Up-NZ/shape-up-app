@@ -9,6 +9,7 @@ import { useRegisterMutation } from "../slices/usersApiSlice";
 import { setCredentials } from "../slices/authSlice";
 import { toast } from "react-toastify";
 import Loader from "../components/Loader";
+import Footer from "../components/Footer";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -103,6 +104,7 @@ const Register = () => {
           </Row>
         </Form>
       </FormContainer>
+      <Footer />
     </div>
   );
 };

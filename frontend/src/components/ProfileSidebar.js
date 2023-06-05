@@ -14,6 +14,7 @@ const ProfileSidebar = () => {
       >
         Update Profile
       </ListGroup.Item>
+
       <ListGroup.Item
         as={Link}
         to="/pages/profile/diet"
@@ -21,12 +22,21 @@ const ProfileSidebar = () => {
       >
         Update Diet Profile
       </ListGroup.Item>
+
       <ListGroup.Item
         as={Link}
         to="/pages/profile/meal-plan"
         active={location.pathname === "/pages/profile/meal-plan"}
       >
         Meal Plan
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as={Link}
+        to="/pages/profile/water-intake"
+        active={location.pathname === "/pages/profile/water-intake"}
+      >
+        Water Intake
       </ListGroup.Item>
     </ListGroup>
   );
