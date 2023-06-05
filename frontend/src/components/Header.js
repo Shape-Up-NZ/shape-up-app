@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Stack, IconButton } from "@mui/material";
-import { Container, Navbar, Nav, NavDropdown, Badge } from "react-bootstrap";
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../slices/usersApiSlice";
@@ -46,17 +45,24 @@ const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const NavLink = ({ to, children }) => {
+    const isActive = location.pathname === to;
+    return (
+      <Nav.Link as={Link} to={to} className={isActive ? "active" : ""}>
+        {children}
+      </Nav.Link>
+    );
+  };
+
   return (
-    <Navbar bg="light" expand="md">
+    <Navbar bg="white" expand="md">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
             src={Logo}
             alt="logo"
             style={{
-              width: "94px",
-              height: "83px",
-              margin: "10px 2px 0 0",
+              width: "100px",
             }}
           />
         </Navbar.Brand>
@@ -68,96 +74,11 @@ const Header = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link
-              as={Link}
-              to="/"
-              onClick={() => handleLinkClick("/")}
-              style={{
-                textDecoration: "none",
-                color: activeLink === "/" ? "#FF2625" : "#3A1212",
-                borderBottom: activeLink === "/" ? "3px solid #FF2625" : "none",
-              }}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/pages/features"
-              onClick={() => handleLinkClick("/pages/features")}
-              style={{
-                textDecoration: "none",
-                color: activeLink === "/pages/features" ? "#FF2625" : "#3A1212",
-                borderBottom:
-                  activeLink === "/pages/features"
-                    ? "3px solid #FF2625"
-                    : "none",
-              }}
-            >
-              Features
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/pages/workouts"
-              onClick={() => handleLinkClick("/pages/workouts")}
-              style={{
-                textDecoration: "none",
-                color: activeLink === "/pages/workouts" ? "#FF2625" : "#3A1212",
-                borderBottom:
-                  activeLink === "/pages/workouts"
-                    ? "3px solid #FF2625"
-                    : "none",
-              }}
-            >
-              Workout Database
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/pages/nutrition-checker"
-              onClick={() => handleLinkClick("/pages/nutrition-checker")}
-              style={{
-                textDecoration: "none",
-                color:
-                  activeLink === "/pages/nutrition-checker" ? "#FF2625" : "#3A1212",
-                borderBottom:
-                  activeLink === "/pages/nutrition-checker"
-                    ? "3px solid #FF2625"
-                    : "none",
-              }}
-            >
-              Nutrition Checker
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/pages/bmrcalculator"
-              onClick={() => handleLinkClick("/pages/bmrcalculator")}
-              style={{
-                textDecoration: "none",
-                color:
-                  activeLink === "/pages/bmrcalculator" ? "#FF2625" : "#3A1212",
-                borderBottom:
-                  activeLink === "/pages/bmrcalculator"
-                    ? "3px solid #FF2625"
-                    : "none",
-              }}
-            >
-              BMR
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/pages/water-intake"
-              onClick={() => handleLinkClick("/pages/water-intake")}
-              style={{
-                textDecoration: "none",
-                color:
-                  activeLink === "/pages/water-intake" ? "#FF2625" : "#3A1212",
-                borderBottom:
-                  activeLink === "/pages/water-intake"
-                    ? "3px solid #FF2625"
-                    : "none",
-              }}
-            >
-              Water Intake
-            </Nav.Link>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/pages/features">Features</NavLink>
+            <NavLink to="/pages/workouts">Workout Database</NavLink>
+            <NavLink to="/pages/nutrition-checker">Nutrition Checker</NavLink>
+            <NavLink to="/pages/bmr-calculator">BMR</NavLink>
           </Nav>
           <Nav>
             {userInfo ? (

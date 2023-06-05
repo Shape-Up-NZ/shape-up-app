@@ -3,6 +3,7 @@ import { apiSlice } from "./apiSlice";
 const USERS_URL = "/api/users";
 const USER_STATUS_URL = "/api/user/status";
 const USER_MEAL_PLAN_URL = "/api/user/meal-plan";
+const USER_WATER_INTAKE_URL = "/api/users/water-intake";
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -60,6 +61,23 @@ export const userApiSlice = apiSlice.injectEndpoints({
         body: data,
       }),
     }),
+
+    // User Water intake endpoints
+    createWaterIntake: builder.mutation({
+      query: (data) => ({
+        url: `${USER_WATER_INTAKE_URL}`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+
+    updateWaterIntake: builder.mutation({
+      query: (data) => ({
+        url: `${USER_WATER_INTAKE_URL}`,
+        method: "PUT",
+        body: data,
+      }),
+    }),
   }),
 });
 
@@ -69,6 +87,8 @@ export const {
   useRegisterMutation,
   useUpdateUserMutation,
   useUpdateStatusMutation,
-  useUpdateMealPlanMutation,
   useCreateMealPlanMutation,
+  useUpdateMealPlanMutation,
+  useCreateWaterIntakeMutation,
+  useUpdateWaterIntakeMutation
 } = userApiSlice;

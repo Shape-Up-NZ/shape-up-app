@@ -7,6 +7,7 @@ import ProfileSidebar from "../components/ProfileSidebar";
 import UpdateProfile from "../components/UpdateProfile";
 import UpdateDietProfile from "../components/UpdateDietProfile";
 import MealPlan from "../components/MealPlan";
+import WaterIntake from "../components/WaterIntake";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const Profile = () => {
           />
           <Route path="diet" element={<UpdateDietProfile />} />
           <Route path="meal-plan" element={<MealPlan />} />
+          <Route path="water-intake" element={<WaterIntake />} />
         </Routes>
       </Col>
     </Row>

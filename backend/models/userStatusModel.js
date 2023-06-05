@@ -32,6 +32,11 @@ const statusSchema = mongoose.Schema({
     enum: ["sedentary", "lightlyActive", "active", "veryActive"],
     required: true,
   },
+  goal: {
+    type: String,
+    enum: ["Maintenance", "Cutting", "Bulking"],
+    required: true,
+  },
 });
 
 const Status = mongoose.model("Status", statusSchema);
