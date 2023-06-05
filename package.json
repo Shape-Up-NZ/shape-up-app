@@ -8,7 +8,8 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm run start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,11 @@
     "react-query": "^3.39.3"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "babel-jest": "^29.5.0",
     "concurrently": "^8.0.1",
+    "jest": "^29.5.0",
     "nodemon": "^2.0.22"
   }
 }
