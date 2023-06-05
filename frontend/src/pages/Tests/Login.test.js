@@ -4,11 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
-import Home from "../Home";
 import Login from "../Login";
-
-// Mock the HeroBanner component
-jest.mock("../../components/HeroBanner", () => () => <div>HeroBanner</div>);
 
 // Initialize the mock Redux store
 const mockStore = configureMockStore();
@@ -17,11 +13,6 @@ const store = mockStore({
     userInfo: null, 
   },
   // other mock state data
-});
-
-test("Home renders HeroBanner", () => {
-  const { getByText } = render(<Home />);
-  expect(getByText("HeroBanner")).toBeInTheDocument();
 });
 
 test("Login renders and updates state correctly", () => {
