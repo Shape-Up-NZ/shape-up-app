@@ -79,15 +79,15 @@ const CalorieCalculator = () => {
         <tbody>
           <tr>
             <td>Deficit</td>
-            <td>{results.deficit}</td>
+            <td data-testid="deficit">{results.deficit}</td>
           </tr>
           <tr>
             <td>Maintenance</td>
-            <td>{results.maintenance}</td>
+            <td data-testid="maintenance">{results.maintenance}</td>
           </tr>
           <tr>
             <td>Bulking</td>
-            <td>{results.bulking}</td>
+            <td data-testid="bulking">{results.bulking}</td>
           </tr>
         </tbody>
       </Table>
