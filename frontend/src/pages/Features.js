@@ -18,11 +18,10 @@ const FeaturesPage = () => {
               <Card className="mb-4 text-center">
                 <Card.Body>
                   {/* <WorkoutPlannerIcon size={60} /> */}
-                  <Card.Title className="mt-3">Workout Planner</Card.Title>
+                  <Card.Title className="mt-3">Workout Database</Card.Title>
                   <Card.Text>
-                    Plan and track your workouts with our intuitive workout
-                    planner. Stay organized and motivated on your fitness
-                    journey.
+                    Our workout database is a comprehensive resource for anyone
+                    looking to improve their fitness. Find the perfect routine to target your specific goals.
                   </Card.Text>
                   <Link to="/pages/workouts" className="btn btn-primary">
                     Learn More

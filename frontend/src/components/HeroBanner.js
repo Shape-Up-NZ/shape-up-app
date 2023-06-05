@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useLocation } from "react-router-dom";
 import { Box, Stack, Typography, Button } from '@mui/material';
 import HeroBannerImage from '../assets/images/banner.png';
 
@@ -22,7 +23,8 @@ const HeroBanner = () => {
         <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '32px' } }}>
           We are here to help <br /> you to achieve your <br /> fitness dreams.
         </Typography>
-        <Button variant="contained" color="success" href="../pages/features">
+        <Button variant="contained" color="success" component={Link}
+  to="../pages/features">
           What we offer
         </Button>
       </Box>

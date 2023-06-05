@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const BMRCalculator = () => {
   return (
-    <>
+    <><>
       <FormContainer>
         <Box
           sx={{
@@ -23,8 +23,7 @@ const BMRCalculator = () => {
           <CalorieCalculator />
         </Box>
       </FormContainer>
-      <Footer />
-    </>
+    </><Footer /></>
   );
 };
 

@@ -23,7 +23,7 @@ const AboutUs = () => {
               <li>Diet Profile</li>
               <li>Meal Planner</li>
               <li>Water Intake Log</li>
-              <li>Workout Planner</li>
+              <li>Workout Database</li>
               <li>Nutrition Checker</li>
               <li>BMR Calculator</li>
             </ul>
