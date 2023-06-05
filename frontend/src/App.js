@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Features from "./pages/Features";
@@ -35,8 +36,11 @@ const App = () => {
           <Route path="/pages/bmr-calculator" element={<BMRCalculator />} />
           <Route path="/pages/about" element={<About />} />
 
-          <Route path="/pages/register" element={<Register />} />
-          <Route path="/pages/login" element={<Login />} />
+          {/* Public Route */}
+          <Route path="" element={<PublicRoute />}>
+            <Route path="/pages/register" element={<Register />} />
+            <Route path="/pages/login" element={<Login />} />
+          </Route>
 
           {/* Private Route */}
           <Route path="" element={<PrivateRoute />}>
