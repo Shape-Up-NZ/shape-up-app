@@ -38,6 +38,10 @@ const ExercisePage = () => {
     setCurrentPage(pageNumber);
   };
 
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   return (
     <div>
       <div className="select-container">
@@ -60,7 +64,7 @@ const ExercisePage = () => {
         <div className="exercise-container">
           {currentExercises.map((exercise) => (
             <div key={exercise.id} className="exercise-card">
-              <h3>{exercise.name}</h3>
+              <h3>{capitalizeFirstLetter(exercise.name)}</h3>
               <div className="gif-container">
                 <img src={exercise.gifUrl} alt={exercise.name} className="exercise-gif" />
               </div>
