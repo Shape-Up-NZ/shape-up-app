@@ -43,5 +43,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "babel-jest": "^29.5.0",
+    "jest": "^27.5.1",
+    "redux-mock-store": "^1.5.4"
   }
 }
