@@ -72,7 +72,7 @@ const ExercisePage = () => {
           ))}
         </div>
       ) : (
-        <p>No exercises found.</p>
+        <h3>Exercises and demonstrations will be displayed here.</h3>
       )}
       {exercises.length > exercisesPerPage && (
         <div className="pagination">

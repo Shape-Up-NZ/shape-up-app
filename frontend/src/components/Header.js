@@ -108,7 +108,7 @@ const Header = () => {
                     : "none",
               }}
             >
-              Workout Planner
+              Workout Database
             </Nav.Link>
             <Nav.Link
               as={Link}

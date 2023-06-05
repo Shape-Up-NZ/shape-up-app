@@ -86,11 +86,11 @@ const NutritionCheckerForm = () => {
                   <td>{nutritionResult.name}</td>
                   <td>100g</td>
                   <td>{nutritionResult.calories}</td>
-                  <td>{nutritionResult.total_fat_g}</td>
-                  <td>{nutritionResult.saturated_fat_g}</td>
+                  <td>{nutritionResult.fat_total_g}</td>
+                  <td>{nutritionResult.fat_saturated_g}</td>
                   <td>{nutritionResult.cholesterol_mg}</td>
                   <td>{nutritionResult.sodium_mg}</td>
-                  <td>{nutritionResult.carbohydrate_g}</td>
+                  <td>{nutritionResult.carbohydrates_total_g}</td>
                   <td>{nutritionResult.fiber_g}</td>
                   <td>{nutritionResult.sugar_g}</td>
                   <td>{nutritionResult.protein_g}</td>
