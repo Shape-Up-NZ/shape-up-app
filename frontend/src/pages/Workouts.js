@@ -1,16 +1,26 @@
-import React, {useState} from 'react';
-import { Box } from '@mui/material';
+import React, { useState } from "react";
+import { Box } from "@mui/material";
 
-import WorkoutPlan from '../components/WorkoutPlan';
-import SearchExercises from '../components/WorkoutSearch';
-
+import WorkoutPlan from "../components/WorkoutPlan";
+import SearchExercises from "../components/WorkoutSearch";
+import Footer from "../components/Footer";
 
 const Workouts = () => {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+    <>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "80vh",
+        }}
+      >
         <SearchExercises />
-    </Box>
-  )
-}
+      </Box>
+      <Footer />
+    </>
+  );
+};
 
-export default Workouts
+export default Workouts;
