@@ -23,13 +23,14 @@ Your journey to wellness starts here!
 
 ## Shape Up Features
 
+- Personal Account.
+- Diet Profile.
+- Goal Settings.
+- Meal Planner.
+- Water Intake Log.
 - Workout Database.
 - Nutrition Checker.
 - BMR Calculator.
-- Create Account.
-- Goal Setting.
-- Meal Planner.
-- Water Intake Log.
 
 ## Getting Started
 Clone the repo
