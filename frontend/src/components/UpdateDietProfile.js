@@ -39,9 +39,9 @@ const UpdateDietProfile = () => {
         localStorage.setItem("profileData", profileData);
 
         setIsLoading(false);
-      } catch (error) {
+      } catch (err) {
         toast.error("Failed to fetch profile data.");
-        console.log("Fetch profile data error:", error);
+        toast.error(err?.data?.message || err.error);
         setIsLoading(false);
       }
     };
@@ -121,14 +121,12 @@ const UpdateDietProfile = () => {
         const response = await updateStatus(updatedProfile).unwrap();
 
         toast.success("Diet Profile Updated!");
-        console.log("Updated user:", response);
 
         // Save the updated profile data to local storage
         const profileData = JSON.stringify(updatedProfile);
         localStorage.setItem("profileData", profileData);
-      } catch (error) {
-        toast.error("Update failed");
-        console.log("Update failed:", error);
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
       }
     } else {
       toast.error("Please fill in all the required fields.");

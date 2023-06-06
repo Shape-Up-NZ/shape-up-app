@@ -24,7 +24,12 @@ const statusSchema = mongoose.Schema({
   },
   gender: {
     type: String,
-    enum: ["male", "female"],
+    validate: {
+      validator: function (value) {
+        return /^(male|female)$/i.test(value); // case-insensitive validation
+      },
+      message: "Gender must be either 'male' or 'female'.",
+    },
     required: true,
   },
   activityLevel: {
