@@ -29,7 +29,14 @@ const WaterIntakeLog = () => {
       }
     };
 
-    fetchWaterIntake();
+    // Load the water intake from local storage
+    const storedWaterIntake = localStorage.getItem("waterIntake");
+    if (storedWaterIntake) {
+      const parsedWaterIntake = JSON.parse(storedWaterIntake);
+      setTotalWater(parsedWaterIntake.litersDrank);
+    } else {
+      fetchWaterIntake();
+    }
   }, []);
 
   const handleChange = (event) => {
@@ -80,7 +87,7 @@ const WaterIntakeLog = () => {
           <Form onSubmit={handleSubmit} className="water-intake-log__form">
             <Form.Label
               className="water-intake-log__label"
-              controlId="totalWater"
+              htmlFor="totalWater"
             >
               Log water consumed (in litres):
               <Form.Control
