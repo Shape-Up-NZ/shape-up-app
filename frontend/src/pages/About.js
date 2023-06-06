@@ -21,6 +21,7 @@ const AboutUs = () => {
             <ul>
               <li>Personal Account</li>
               <li>Diet Profile</li>
+              <li>Goal Settings</li>
               <li>Meal Planner</li>
               <li>Water Intake Log</li>
               <li>Workout Database</li>

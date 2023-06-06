@@ -28,7 +28,7 @@ const statusSchema = mongoose.Schema({
       validator: function (value) {
         return /^(male|female)$/i.test(value); // case-insensitive validation
       },
-      message: "Gender must be either 'male' or 'female'.",
+      message: "Gender must be either 'Male' or 'Female'.",
     },
     required: true,
   },

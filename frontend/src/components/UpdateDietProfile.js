@@ -137,7 +137,7 @@ const UpdateDietProfile = () => {
     <>
       <Form onSubmit={submitHandler}>
         <Form.Group className="my-2" controlId="height">
-          <Form.Label>Height</Form.Label>
+          <Form.Label>Height (CM)</Form.Label>
           <Form.Control
             type="text"
             placeholder="Enter height"

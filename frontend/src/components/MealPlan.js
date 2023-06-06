@@ -47,21 +47,22 @@ const MealPlan = () => {
         localStorage.setItem("mealPlan", mealPlanData);
       } catch (error) {
         console.error("Fetch meal plan error:", error);
-        // Load the meal plan from local storage if fetching fails
-        const storedMealPlan = localStorage.getItem("mealPlan");
-        if (storedMealPlan) {
-          const parsedMealPlan = JSON.parse(storedMealPlan);
-          setMeal1(parsedMealPlan.meal1);
-          setMeal2(parsedMealPlan.meal2);
-          setMeal3(parsedMealPlan.meal3);
-          setMeal4(parsedMealPlan.meal4);
-          setMeal5(parsedMealPlan.meal5);
-          setSnacks(parsedMealPlan.snacks);
-        }
       }
     };
 
-    fetchMealPlan();
+    // Load the meal plan from local storage if fetching fails
+    const storedMealPlan = localStorage.getItem("mealPlan");
+    if (storedMealPlan) {
+      const parsedMealPlan = JSON.parse(storedMealPlan);
+      setMeal1(parsedMealPlan.meal1);
+      setMeal2(parsedMealPlan.meal2);
+      setMeal3(parsedMealPlan.meal3);
+      setMeal4(parsedMealPlan.meal4);
+      setMeal5(parsedMealPlan.meal5);
+      setSnacks(parsedMealPlan.snacks);
+    } else {
+      fetchMealPlan();
+    }
   }, []);
 
   const handleSubmit = async (e) => {
