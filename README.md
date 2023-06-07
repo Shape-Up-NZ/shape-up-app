@@ -40,21 +40,22 @@ cd shape-up-app
 npm install
 ```
 
-Install Frontend Dependencies
+Install FRONTEND dependencies
 ```shell
 cd frontend
 npm install
 ```
 
-Setting the .env file
+Setting the .env file inside the ROOT folder
 ```shell
+cd
 cp .env.example .env
 nano .env
 ```
 add your MonggoDB URI
 
 ## Run The App
-Go Inside Root Folder, then run
+In the ROOT folder, run
 ```shell
 npm run dev
 ```
@@ -69,7 +70,7 @@ Backend/API: 9000
 
 This app build with below technologies
 
-[![Stack](https://skills.thijs.gg/icons?i=html,css,js,mongodb,express,react,nodejs)](https://github.com)
+[![Stack](https://skills.thijs.gg/icons?i=html,css,js,vite,mongodb,express,react,nodejs)](https://github.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
