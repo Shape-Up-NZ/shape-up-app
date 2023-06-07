@@ -17,7 +17,7 @@ Your journey to wellness starts here!
 
 ## Prerequisites
 
-- MonggoDB
+- MongoDB
 - Node JS
 - NPM
 
@@ -52,7 +52,7 @@ cd
 cp .env.example .env
 nano .env
 ```
-add your MonggoDB URI
+add your MongoDB URI
 
 ## Run The App
 In the ROOT folder, run
