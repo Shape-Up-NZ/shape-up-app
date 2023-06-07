@@ -7,7 +7,7 @@ import {
   Button,
   Table,
 } from "react-bootstrap";
-import FormContainer from "../components/FormContainer";
+import FormContainer from "./FormContainer";
 
 const CalorieCalculator = () => {
   const [age, setAge] = useState("");

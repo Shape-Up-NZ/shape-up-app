@@ -36,12 +36,12 @@ const MealPlan = () => {
         const response = await fetch(`/api/user/meal-plan/${currentDate}`);
         const data = await response.json();
 
-        setMeal1(data.meal1);
-        setMeal2(data.meal2);
-        setMeal3(data.meal3);
-        setMeal4(data.meal4);
-        setMeal5(data.meal5);
-        setSnacks(data.snacks);
+        setMeal1(data.meal1 || "");
+        setMeal2(data.meal2 || "");
+        setMeal3(data.meal3 || "");
+        setMeal4(data.meal4 || "");
+        setMeal5(data.meal5 || "");
+        setSnacks(data.snacks || "");
 
         const mealPlanData = JSON.stringify(data);
         localStorage.setItem("mealPlan", mealPlanData);
@@ -54,12 +54,12 @@ const MealPlan = () => {
     const storedMealPlan = localStorage.getItem("mealPlan");
     if (storedMealPlan) {
       const parsedMealPlan = JSON.parse(storedMealPlan);
-      setMeal1(parsedMealPlan.meal1);
-      setMeal2(parsedMealPlan.meal2);
-      setMeal3(parsedMealPlan.meal3);
-      setMeal4(parsedMealPlan.meal4);
-      setMeal5(parsedMealPlan.meal5);
-      setSnacks(parsedMealPlan.snacks);
+      setMeal1(parsedMealPlan.meal1 || "");
+      setMeal2(parsedMealPlan.meal2 || "");
+      setMeal3(parsedMealPlan.meal3 || "");
+      setMeal4(parsedMealPlan.meal4 || "");
+      setMeal5(parsedMealPlan.meal5 || "");
+      setSnacks(parsedMealPlan.snacks || "");
     } else {
       fetchMealPlan();
     }
