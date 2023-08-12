@@ -9,7 +9,8 @@
     "server": "nodemon backend/server.js",
     "client": "npm run start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "jest"
+    "test": "jest",
+    "vercel-build": "echo hello"
   },
   "repository": {
     "type": "git",
