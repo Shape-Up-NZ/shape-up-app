@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+        { "source": "/api/(.*)", "destination": "https://shape-up-api.miguelemmara.me/api/$1" }
+    ]
+  }
+  
