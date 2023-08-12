@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "<h1 align=\"center\"> 🌐 Shape Up App </h1> <p align=\"center\"> MongoDB, Expressjs, React/Redux, Nodejs </p>",
   "type": "module",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
